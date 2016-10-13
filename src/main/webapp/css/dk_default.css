@@ -1,0 +1,42 @@
+body{ background:#0187D0;}
+.dk_default_bg{width:990px; height:748px; background:url(../images/defulatbg.jpg) no-repeat left top;margin: -400px auto 0px -495px;position: absolute;left: 50%;top:45%;}
+.dk_default_logo{width:990px; height:38px;margin-top:210px;font: bolder 31px/38px Microsoft YaHei, SimHei; color:#F5F5F5;
+-o-text-shadow:0 4px 2px #116B97;-moz-text-shadow:0 4px 2px #116B97;-webkit-text-shadow:0 4px 2px #116B97;text-shadow:0 4px 2px #116B97;
+filter: Shadow(Color='#116B97', Direction='135', Strength='6');filter: dropshadow(OffX=2, OffY=2, Color='#116B97', Positive='true');}
+
+.dk_default_box{ width:360px; height:267px; background:url(../images/login_base.png) no-repeat left top; margin-top:25px; overflow:hidden;}
+.dk_default_box .dk_default_img{ width:97px; height:30px; margin-top:25px;letter-spacing:2px;font: bolder 22px/30px Microsoft YaHei, SimHei; color:#F5F5F5;
+-o-text-shadow:0 3px 4px #116B97;-moz-text-shadow:0 3px 4px #116B97;-webkit-text-shadow:0 3px 4px #116B97;text-shadow:0 3px 4px #116B97;
+filter: Shadow(Color='#116B97', Direction='135', Strength='6');filter: dropshadow(OffX=2, OffY=2, Color='#116B97', Positive='true');}
+
+.dk_default_box .dk_account{ width:200px;position:relative; }
+.dk_default_box .dk_account .dk_det_icon{width:16px; height:16px; position:absolute; left:15px; top:11px;}
+.dk_default_box .dk_account .dk_user_icon{ background:url(../images/icon_user.png) no-repeat left top;}
+.dk_default_box .dk_account .dk_pass_icon{ background:url(../images/icon_pass.png) no-repeat left top;}
+.dk_default_box .dk_account .dk_account_input{width:200px; height:34px; line-height:34px; background-color:#F5F5F5; border:solid 1px #F5F5F5; text-indent:40px;font-family:Microsoft YaHei, SimHei;} 
+*+html  .dk_default_box .dk_account .dk_account_input{ text-indent:40px; margin-left:-40px;}
+.dk_default_box .dk_account .dk_account_input:hover,
+.dk_default_box .dk_account .dk_account_input:focus {border:1px solid #2E74DC;outline:none;}
+.dk_default_box .dk_safe{ color:#fff;}
+.dk_default_box .dk_safe .dk_checkbox{ width:15px; height:15px; margin-top:-3px;}
+.dk_default_box .dk_account .dk_def_but{width:200px; height:35px;vertical-align: middle; background-color:#2E74DC; color:#FFF; border:none;font-family:Microsoft YaHei, SimHei; cursor:pointer;}
+.dk_default_box .dk_account .dk_def_but:hover{ background-color:#528BE2;}
+.dk_default_box .dk_error{ height:20px; line-height:20px; background-color:#5395B6; color:#CCCCCC; text-align:center;}
+
+.dk_copyright{ height:55px;background:url(../images/copy.png) no-repeat left top; margin-top:50px;}
+
+  
+.dk_account_input::-webkit-input-placeholder{color:#999;}/*谷歌*/
+.dk_account_input:-moz-placeholder{color:#999;}/*火狐 4-18*/
+.dk_account_input::-moz-placeholder{color:#999;}/*火狐+19*/
+.dk_account_input:-ms-input-placeholder{color:#999;}/*IE10*/
+.dk_phcolor{color:#999;}/*IE9以下默认颜色*/
+
+.dk_download{ width:198px; height:35px; line-height:35px; text-align:center; color:#A1D9F5; font-size:16px; border:solid 1px #A1D9F5; cursor:pointer;}
+.dk_download:hover{ background-color:#A1D9F5;opacity: 0.7;filter: alpha(opacity=70);color:#333333;}
+.dk_phone{ height:170px; width:167px; position:absolute; left:414px; top:-170px;}
+
+.dk_phone_jt{ height:13px; line-height:13px;opacity:8.7;filter: alpha(opacity=80);color:#EEBCB0;}
+.dk_phone_qr{background-color:#EEBCB0;background-color:rgba(240,210,198,0.8);filter:Alpha(opacity=80);position:static;*zoom:1;}
+.dk_phone_qr .dk_qr{position: relative;}
+.dk_phone_qr .dk_qr img{ width:112px; height:112px;}

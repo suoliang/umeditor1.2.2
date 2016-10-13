@@ -1,0 +1,16 @@
+
+#macro(paging $prop $value)
+<div class="c_page c_fr c_mt15 c_mb15 #if($prop=="class")$value#end" #if($prop!="class")$prop="$value"#end>
+	<div tag="paging-item" oid="paging-item"></div>
+	<div class="c_page_goto">
+		共<span tag="paging-info" oid="totalsize"></span>条
+	</div>
+	<div class="c_page_goto">跳转至</div>
+	<div class="c_page_input">
+		<input type="text" tag="paging-input" oid="pageNo">
+	</div>
+	<div class="c_page_goto" tag="paging-button" oid="gotoNo">
+		<i>GO</i>
+	</div>
+</div>
+#end

@@ -1,0 +1,30 @@
+.dk_main{margin-left:75px;padding-right:10px; padding-left:10px;}
+.dk_layout{ margin:0;}
+.dk_sidebar{float: left;width:75px;height:100%; z-index:99;}
+.c_clearfix{ display:inline-block;}
+
+.dk_sidebar .dk_search{ height:40px;}
+.dk_sidebar .dk_search .c_input,.dk_sidebar .dk_search .c_vl{ display:none;}
+.dk_sidebar .dk_search .dk_hide{float:left; background-position:-172px -11px; width:19px; height:14px;  margin:13px 0 0 27px; cursor:pointer;}
+/*一级导航*/
+.dk_sidebar .dk_menu{ width:75px;}
+.dk_sidebar .dk_menu li{ width:75px;}
+.dk_sidebar .dk_menu li .dk_nav{ height:50px;overflow:hidden;}
+.dk_sidebar .dk_menu li .dk_nav i{ margin:18px 0 5px 29px;}
+.dk_sidebar .dk_menu li .dk_nav span{ width:75px;text-align:center; display:none;}
+.dk_sidebar .dk_menu li p.dk_sprite{display:none;}
+/*end一级导航*/
+/*二级导航*/
+.dk_sidebar .dk_menu li .dk_sub_menu{ position:absolute; left:75px;margin-top: -50px;width:140px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav{width:120px;padding-left:10px; padding-right:10px;height:35px; line-height:35px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav span{width:75px;}
+/*end二级导航*/
+/*三级导航*/
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu{position:absolute; left:140px; top:0px;width:140px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav{width:120px;padding-left:10px;padding-right:10px;height:40px;line-height:40px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav span{width:103px;}
+/*end二级导航*/
+
+/*首页*/
+.c_index{ width:100%;overflow: hidden;}
+.c_block{ width:32.4%; height:246px;margin-bottom:1%;}

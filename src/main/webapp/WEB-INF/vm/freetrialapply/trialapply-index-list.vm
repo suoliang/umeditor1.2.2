@@ -1,0 +1,34 @@
+#foreach($trialApply in $trialApplys)
+	<tr>
+		<td>$velocityCount</td>
+		<td>$!trialApply.name</td>
+		<td>$!trialApply.phone</td>
+		<td>
+			#foreach($sources in $sourceMaps.entrySet())
+				#if($!trialApply.source == $!sources.key)
+					$!sources.value
+				#end
+		    #end
+		</td>
+		<td style="white-space: normal;">$!trialApply.address</td>
+		<!-- <td style="white-space: normal;">
+			#if($!trialApply.promotionSource == 1)
+				百度
+			#elseif($!trialApply.promotionSource == 2)
+				360
+			#else
+				默认
+			#end
+		</td> -->
+		<td style="white-space: normal;">$!trialApply.message</td>
+		<td>$!date.format('yyyy-MM-dd HH:mm:ss',$!trialApply.createTime)</td>
+		<td>
+			#if($!trialApply.status == 1)
+			<a href="javascript:void(0)" class="fc_org c_mr10" tag="changeStatus" oid="$!trialApply.id">处理</a>
+			#else
+			<a href="javascript:void(0)" class="fc_green c_mr10" >已处理</a>
+			#end
+			<a href="javascript:void(0)" class="fc_blue" tag="deleteApply" oid="$!trialApply.id">删除</a>
+		</td>
+	</tr>
+#end

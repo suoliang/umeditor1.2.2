@@ -1,0 +1,59 @@
+/*图片加载*/
+.dk_sprite{ background:url(../../images/dk.sprite.png);}
+/*边框*/
+.bd_gay{ border:solid 1px #E0E0E0;}
+
+/*背景色*/
+.bg_gay{background-color:#f5f5f5;}
+.bg_whiter {background-color: #fff;}
+
+/*字体色*/
+.fc_org{color:#FF6B4F;}
+.fc_blue{color:#3595D5}
+.fc_green{color:#62AA62;}
+.fc_darkgay{color:#666666;}
+
+.input{height:23px;line-height:23px; font-size:12px;color:#333333; padding:0 5px;font-family:Microsoft YaHei, SimHei; border:solid 1px #B1B5BD; }
+.textarea{line-height:23px; color:#7F7F7F; font-size:12px;font-family:Microsoft YaHei, SimHei;padding:0 5px;border:#E5E5E5 1px solid; resize:none; background-color:#F5F5F5;}
+.data_icon {background: #fff url(../../images/date.jpg) no-repeat right center;}
+
+/*表格*/
+.tab_box{}
+.tab_box .table{ width:100%; background-color:#fff;}
+.tab_box .table thead tr th{height:34px; line-height:34px; font-size:13px; text-indent:10px;border-bottom:solid 1px #E0E0E0;}
+.tab_box .table tbody tr td{height:34px; line-height:34px;text-indent:10px;font-size:12px;color: #595959;border-bottom:solid 1px #E0E0E0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/*翻页*/
+.c_page{}
+.c_page div{ float:left; margin-left:5px; font-size:13px; color:#7F7F7F;}
+.c_page .c_page_num{ background-color:#E7E7E7; border-radius:2px; cursor:pointer; padding:4px 8px; border:solid 1px #C2C0C0;}
+.c_page .c_page_num:hover,.c_page .active{background-color:#528BE2; color:#FFF; border:solid 1px #2B8ACB;}
+.c_page .c_page_goto{ line-height:25px;}
+.c_page .c_page_goto span{ color:#4C4C4C;}
+.c_page .c_page_input input{ width:35px; height:23px;line-height:25px;border:solid 1px #C2C0C0; text-align:center;}
+.c_page .c_page_goto i{padding:2px 5px; border-top: solid 1px #A0A0A0; border-left: solid 1px #A0A0A0; border-right: solid 1px #696969;border-bottom: solid 1px #696969; cursor:pointer;}
+.c_page .c_page_goto i:hover{border-bottom: solid 1px #A0A0A0; border-right: solid 1px #A0A0A0; border-left: solid 1px #696969;border-top: solid 1px #696969;}
+
+.search_box {line-height:25px;}
+
+/*下拉*/
+.dk_divselect{background-color:#FFF; position:relative;font-size:12px;}
+.dk_divselect .cite{ display:block;border:1px solid #B1B5BD; height:23px;line-height:23px;display:block;  cursor:pointer;font-style:normal; text-indent:5px;color:#333333;background: url(../../images/xjt.png) no-repeat right center;}
+.dk_divselect .cite .citeT{ display:block;height:21px;overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.dk_divselect ul{max-height:200px;_height:expression(this.scrollHeight > 200 ? "200px" : "auto"); overflow:auto;border:1px solid #B1B5BD; background-color:#ffffff; position:absolute; margin-top:-1px; display:none; z-index: 9;}
+.dk_divselect ul li{height:25px;line-height:25px; border-bottom:none; display:block;word-break:break-all; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.dk_divselect ul li a{display:block; height:25px;line-height:25px;padding-left:5px; padding-right:10px;word-break:break-all; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;color:#7f7f7f;}
+.dk_divselect ul li a:hover{background-color:#E5E5E5; text-decoration:none;}
+
+/*按钮规格*/
+.md_but{display:inline-block;height:25px;min-width:70px;padding:0 5px;line-height:25px;font-size:12px; text-align:center;cursor:pointer}
+
+/*按钮颜色*/
+.but_blue{background-color:#6EB4DC; color:#fff;}/*蓝色的按钮（上报）*/
+.but_blue:hover{ background-color:#5EABD9;}
+
+/*申请试用 下拉框*/
+.s_sqsy{width:112px;}
+.s_sqsy .cite{ width:110px;}
+.s_sqsy .cite .citeT{ width:80px;}
+.s_sqsy ul{width:110px;}
+.s_sqsy ul li a{width:100px;}

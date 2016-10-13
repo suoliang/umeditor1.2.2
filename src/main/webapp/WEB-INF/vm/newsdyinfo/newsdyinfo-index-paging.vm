@@ -1,0 +1,9 @@
+#set($newsDyInfos = $pageInfo.data) 
+
+#parse("/newsdyinfo/newsdyinfo-index-list.vm")
+
+<script type="text/javascript">
+	$(function() {
+		$('#newsdyinfo-paging').paging('setInfo', $!pageInfo.pageNo, $!pageInfo.pageSize, $!pageInfo.totalPages, $!pageInfo.totalRecords);
+	})
+</script>

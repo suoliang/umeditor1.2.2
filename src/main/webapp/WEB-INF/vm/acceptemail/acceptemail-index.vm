@@ -1,0 +1,53 @@
+#parse("/common/header.vm")
+
+    <div class="dk_layout"> 
+    <div class="dk_main"> 
+		 <div class="breadcrumb">
+            <ul id="breadcrumbs-two">
+                <li><a href="index.html"><i class="iconfont icon-home"></i></a></li>
+                <li><a href="" class="current">收件人列表</a></li>
+                
+            </ul>
+         </div>
+         <!--breadcrumb end-->
+         
+         <div class="c_search_box">
+	      <div class="c_fr">
+	      <a href="javascript:void(0);" tag="btn-add-email" class="">新增</a>
+	      </div> 
+	    </div>
+         
+         <div class="tab_box c_mt10">
+             <table class="table bd_gay">
+	             <thead>
+	                <tr class="bg_gay">
+	                	<th width="10%">编号</th>
+	                	<th>邮箱</th>
+	                	<th>创建时间</th>
+	                	<th>操作</th>
+	                </tr>
+	             </thead>
+	             <tbody id="acceptemail-container">
+				  	#set($acceptEmails = $pageInfo.data)
+					#parse("/acceptemail/acceptemail-index-list.vm")
+	             </tbody>
+             </table>
+         </div>
+        
+         #paging("id", "acceptemail-paging")
+         
+	</div>
+	<!--dk_main end-->
+	</div>
+	<!--dk_layout end-->
+
+<script type="text/javascript" src="${rc.contextPath}/js/common/commonpage.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/acceptemail/acceptEmailInterface.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/acceptemail/acceptEmailIndex.js" ></script>
+<script type="text/javascript" >
+	$(function() {
+		acceptEmailPage.paging.toSetInfo($!pageInfo.pageNo, $!pageInfo.pageSize, $!pageInfo.totalPages, $!pageInfo.totalRecords);
+	});
+</script>
+
+#parse("/common/footer.vm")

@@ -1,0 +1,109 @@
+#parse("/common/header.vm")
+
+    <div class="dk_layout"> 
+    <div class="dk_main"> 
+		 <div class="breadcrumb">
+            <ul id="breadcrumbs-two">
+                <li><a href="index.html"><i class="iconfont icon-home"></i></a></li>
+                <li><a href="" class="current">申请试用</a></li>
+                
+            </ul>
+         </div>
+         <!--breadcrumb end-->
+
+        <div class="bd_gay bg_whiter c_clearfix c_w c_mt10">    
+                <div class="c_fl c_m10 search_box"><div class="c_mr5 fc_darkgay c_fl c_f14">来源</div>
+                   <div id="divselect1" class="c_fl dk_divselect s_sqsy">
+                        <div class="cite"><div class="citeT">全部</div></div>
+                        <ul style="display: none;">
+                           <li><a href="javascript:;" selectid="" def="true">全部</a></li>
+			               #foreach($sources in $sourceMap.entrySet())
+                           	  <li><a href="javascript:;" selectid="$!sources.key">$!sources.value</a></li>
+						   #end
+                        </ul>
+                        <input name="" type="hidden" value="1" id="inputselect1">
+                    </div>               
+                </div>                
+                <div class="c_fl c_m10 search_box"><div class="c_mr5 fc_darkgay c_fl c_f14">状态</div>
+                   <div id="divselect2" class="c_fl dk_divselect s_sqsy">
+                        <div class="cite"><div class="citeT">全部</div></div>
+                        <ul style="display: none;">
+                           <li><a href="javascript:;" selectid="">全部</a></li>
+                           <li><a href="javascript:;" selectid="1">未处理</a></li>
+                           <li><a href="javascript:;" selectid="2">已处理</a></li>
+                        </ul>
+                        <input name="" type="hidden" value="1" id="inputselect2">
+                    </div>               
+                </div>                
+                <!-- <div class="c_fl c_m10 search_box"><div class="c_mr5 fc_darkgay c_fl c_f14">渠道</div>
+                   <div id="divselect3" class="c_fl dk_divselect s_sqsy">
+                        <div class="cite"><div class="citeT">全部</div></div>
+                        <ul style="display: none;">
+                           <li><a href="javascript:;" selectid="">全部</a></li>
+                           <li><a href="javascript:;" selectid="0">默认</a></li>
+                           <li><a href="javascript:;" selectid="1">百度</a></li>
+                           <li><a href="javascript:;" selectid="2">360</a></li>
+                        </ul>
+                        <input name="" type="hidden" value="1" id="inputselect3">
+                    </div>               
+                </div> -->                
+                <div class="c_fl c_m10"><div class="c_mr5 search_box c_fl c_f14 fc_darkgay">时间</div>
+                	<div class="c_fl">
+	                	<input type="text" class="input data_icon c_w140" id="startTimeInput">
+	                	<i class="c_ml5 c_mr5 dk_fc_gay">-</i>
+	                	<input type="text" class="input data_icon c_w140" id="endTimeInput">
+                	</div>
+                </div>      
+                
+                <div class="c_fl c_mt10 c_ml10"><a href="javascript:void(0)" class="md_but c_bd_radius but_blue queryApply">查询</a></div>                                         
+                <!-- 查询的form表单 -->
+		        <form id="trialapply-form">
+		        	<input type="hidden" name="source" id="source">
+		        	<input type="hidden" name="startTime" id="startTime">
+		        	<input type="hidden" name="endTime" id="endTime">
+		        	<input type="hidden" name="status" id="status">
+		        	<input type="hidden" name="promotionSource" id="promotionSource">
+		        </form>
+         </div>         
+         
+         <div class="tab_box c_mt10">
+             <table class="table bd_gay">
+	             <thead>
+	                <tr class="bg_gay">
+	                	<th width="5%">编号</th>
+	                	<th width="8%">姓名</th>
+	                	<th width="10%">手机号</th>
+	                	<th width="5%">来源</th>
+	                	<th width="15%">单位</th>
+	                	<!-- <th width="5%">渠道</th> -->
+	                	<th>留言</th>
+	                	<th width="12%">申请时间</th>
+	                	<th width="10%">操作</th>
+	                </tr>
+	             </thead>
+	             <tbody id="trialapply-container">
+	             	#set($sourceMaps = $sourceMap)
+				  	#set($trialApplys = $pageInfo.data)
+					#parse("/freetrialapply/trialapply-index-list.vm")
+	             </tbody>
+             </table>
+         </div>
+        
+         #paging("id", "report-apply-paging")
+         
+	</div>
+	<!--dk_main end-->
+	</div>
+	<!--dk_layout end-->
+
+<script type="text/javascript" src="${rc.contextPath}/js/common/laydate/laydate.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/common/commonpage.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/freetrialapply/trialApplyInterface.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/freetrialapply/trialApplyIndex.js" ></script>
+<script type="text/javascript" >
+	$(function() {
+		$('#report-apply-paging').paging('setInfo', $!pageInfo.pageNo, $!pageInfo.pageSize, $!pageInfo.totalPages, $!pageInfo.totalRecords);
+	});
+</script>
+
+#parse("/common/footer.vm")

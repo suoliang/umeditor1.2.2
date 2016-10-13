@@ -1,0 +1,39 @@
+#parse("/common/header.vm")
+
+	<form method="post" id="acceptEmailForm">
+    	<table cellpadding="5">
+    		<input type="hidden" name="id" id="id" value="$!{newsInfoBean.id}" >
+    		<input type="hidden" name="email" value="$!{newsInfoBean.email}" >
+    		<tr>
+    			<td align="right">收件人邮箱:</td>
+				<td>
+					<input type="text" id="email" value="$!{newsInfoBean.email}" style="width:350px;" />
+				</td>
+    		</tr>
+    		
+    		<!-- <tr>
+    			<td align="right">类型:</td>
+    			<td>
+                	<select id="type" style="width:80px;" >
+                		#foreach($newsType in $!newsTypeMap.entrySet()) 
+							<option value="$!{newsType.key}" #if($!newsType.key==$!newsInfoBean.type)selected="selected"#end>$!{newsType.value}</option>
+                		#end
+					</select>
+				</td>					
+    		</tr> -->
+    		
+    		<tr>
+    			<td align="right"></td>
+				<td align="right">
+					<a href="javascript:void(0)" tag="saveEmailInfo">保存</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="javascript:history.go(-1)" >返回</a>
+				</td>
+    		</tr>
+    		
+    	</table>
+	</form>	
+	<script type="text/javascript" src="${rc.contextPath}/js/acceptemail/acceptEmailInterface.js"></script>
+	<script type="text/javascript" src="${rc.contextPath}/js/acceptemail/acceptEmailInput.js"></script>
+	
+#parse("/common/footer.vm")

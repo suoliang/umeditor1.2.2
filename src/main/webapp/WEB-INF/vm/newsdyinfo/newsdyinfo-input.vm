@@ -1,0 +1,97 @@
+#parse("/common/header.vm")
+
+<script type="text/javascript" src="${rc.contextPath}/js/common/laydate/laydate.js"></script>
+<link href="${rc.contextPath}/js/common/ueditor/dialogs/image/image.css" type="text/css" rel="stylesheet">
+<link href="${rc.contextPath}/js/common/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="${rc.contextPath}/js/common/ueditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="${rc.contextPath}/js/common/ueditor/umeditor.js"></script>
+
+
+    	<table cellpadding="5">
+    		<input type="hidden" name="id" id="id" value="$!{newsInfoBean.id}" >
+    		<tr>
+    			<td align="right">标题:</td>
+				<td>
+					<input type="text" id="title" value="$!{newsInfoBean.title}" style="width:350px;" />
+				</td>
+    		</tr>
+    		
+    		<tr>
+    			<td align="right">时间:</td>
+    			<td>
+    				<input type="text" id="dynamicTime" style="width:350px;" value="$!date.format('yyyy-MM-dd HH:mm:ss',$!{newsInfoBean.dynamicTime})" />
+				</td>					
+    		</tr>
+    		
+    		<tr>
+    			<td align="right">类型:</td>
+    			<td>
+                	<select id="type" style="width:80px;" >
+                		#foreach($newsType in $!newsTypeMap.entrySet()) 
+							<option value="$!{newsType.key}" #if($!newsType.key==$!newsInfoBean.type)selected="selected"#end>$!{newsType.value}</option>
+                		#end
+					</select>
+				</td>					
+    		</tr>
+    		
+    		<tr>
+    			<td align="right">关键词:</td>
+    			<td>
+                	<input type="text" id="keyWords" style="width:350px;" value="$!{newsInfoBean.keyWords}"></input>
+				</td>					
+    		</tr>
+    		
+    		<tr>
+    			<td align="right">状态:</td>
+    			<td>
+                	<select id="status" style="width:80px;" >
+                		#foreach($newsStatus in $!newsStatusMap.entrySet()) 
+							<option value="$!{newsStatus.key}" #if($!newsStatus.key==$!newsInfoBean.status)selected="selected"#end>$!{newsStatus.value}</option>
+                		#end
+					</select>
+				</td>					
+    		</tr>
+
+    		<tr>
+    			<td align="right">缩略图:</td>
+				<td>
+					<input type="file" name="file" id="file" style="width:350px">
+					#if($!{newsInfoBean.thumbnailPicUrl} != '')
+						<img alt="" src="$!{visitImagePath}$!{newsInfoBean.thumbnailPicUrl}" style="width:20px;height:20px">
+					#end
+				</td>
+    		</tr>
+    		
+    		<tr>
+    			<td align="right" valign="top">内容:</td>
+				<td>
+					<textarea id="container" type="text/plain" style="width: 980px; height: 180px;">$!{newsInfoBean.content}</textarea>
+             		<input type="hidden" id="content" value="" >
+				</td>
+    		</tr>
+    		
+    		<tr>
+    			<td align="right"></td>
+				<td align="right">
+					<a href="javascript:void(0)" tag="saveNewsInfo">保存</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="javascript:history.go(-1)" >返回</a>
+				</td>
+    		</tr>
+    		
+    	</table>
+	</div>
+	
+	<script type="text/javascript" src="${rc.contextPath}/js/newsdyinfo/newsDyInfoInterface.js"></script>
+	<script type="text/javascript" src="${rc.contextPath}/js/newsdyinfo/newsDyInfoInput.js"></script>
+	
+	<script type="text/javascript">
+		var editor;
+		$(function(){
+			editor = UM.getEditor('container', {
+				
+			});
+		})
+	</script>
+
+#parse("/common/footer.vm")

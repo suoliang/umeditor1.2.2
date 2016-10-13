@@ -1,0 +1,6 @@
+.dk_layout{width:1200px; margin:0 auto;}
+.dk_layout:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.dk_layout{display:inline-block}*html 
+.dk_layout{height:1%;}
+.dk_layout{display:block;}
+.dk_cont .dk_main{ margin:0px;}

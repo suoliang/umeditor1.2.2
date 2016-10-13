@@ -1,0 +1,44 @@
+#parse("/common/header.vm")
+
+    <div class="dk_layout"> 
+    <div class="dk_main"> 
+		 <div class="breadcrumb">
+            <ul id="breadcrumbs-two">
+                <li><a href="index.html"><i class="iconfont icon-home"></i></a></li>
+                <li><a href="" class="current">下载量信息</a></li>
+                
+            </ul>
+         </div>
+         <!--breadcrumb end-->
+         <div class="tab_box c_mt10">
+             <table class="table bd_gay">
+	             <thead>
+	                <tr class="bg_gay">
+	                	<th width="10%">编号</th>
+	                	<th>报告名称</th>
+	                	<th>下载量</th>
+	                </tr>
+	             </thead>
+	             <tbody>
+	             	#foreach($downloads in $downloadList)
+						<tr>
+							<td>$velocityCount</td>
+							<td>
+								#foreach($reportCode in $reportCodeMap.entrySet())
+									#if($!reportCode.value == $!downloads.reportCode)
+										$!reportCode.key
+									#end
+								#end
+							</td>
+							<td>$!downloads.count</td>
+						</tr>
+					#end
+	             </tbody>
+             </table>
+         </div>
+	</div>
+	<!--dk_main end-->
+	</div>
+	<!--dk_layout end-->
+
+#parse("/common/footer.vm")

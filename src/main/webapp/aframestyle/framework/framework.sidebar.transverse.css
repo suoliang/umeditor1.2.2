@@ -1,0 +1,35 @@
+.dk_cont{background-color:#F0F0F0;}
+.dk_sidebar{ min-height:35px; width:100%; overflow:hidden;}
+.dk_cont .dk_main{}
+.dk_sidebar .dk_search{ display:none;}
+/*一级导航*/
+.dk_sidebar .dk_menu{min-height:35px;}
+.dk_sidebar .dk_menu li{ display:block;float:left;height:35px;}
+.dk_sidebar .dk_menu li a{height:35px; line-height:35px;}
+.dk_sidebar .dk_menu li .dk_nav span{ width:64px;}
+.dk_sidebar .dk_menu li .dk_nav i{margin:10px 5px 0 10px;}
+.dk_sidebar .dk_menu li p.dk_sprite{background-position:-281px -51px; width:6px;height:6px;display:block;float:right; margin:18px 10px 0 5px; cursor:pointer;}
+/*end一级导航*/
+/*二级导航*/
+.dk_sidebar .dk_menu li .dk_sub_menu{ position:absolute;}
+.dk_sidebar .dk_menu li .dk_sub_menu li{ position:relative; float:none;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav{width:100px;padding-left:10px; padding-right:10px;height:35px; line-height:35px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav span{width:55px;}
+/*end 二级导航*/
+/*三级导航*/
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu{position:absolute; left:120px; top:0px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav{width:100px; padding-left:10px;padding-right:10px;height:35px;line-height:35px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav span{width:83px;}
+/*.dk_sidebar .dk_menu li .dk_sub_menu li .c_sub2_postion{position:absolute; left:-120px; top:0px;}*/
+/*end 三级导航*/
+/*首页*/
+.dk3_box{ width:32.3%;height:211px; overflow:hidden;}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+#parse("/common/header.vm")
+
+    <div class="dk_layout"> 
+    <div class="dk_main"> 
+		 <div class="breadcrumb">
+            <ul id="breadcrumbs-two">
+                <li><a href="index.html"><i class="iconfont icon-home"></i></a></li>
+                <li><a href="" class="current">新闻列表</a></li>
+                
+            </ul>
+         </div>
+         <!--breadcrumb end-->
+         
+         <div class="c_search_box">
+	      <div class="c_fr">
+	      <a href="javascript:void(0);" tag="btn-add-news" class="">新增</a>
+	      </div> 
+	    </div>
+         
+         <div class="tab_box c_mt10">
+             <table class="table bd_gay">
+	             <thead>
+	                <tr class="bg_gay">
+	                	<th width="10%">编号</th>
+	                	<th>缩略图</th>
+	                	<th>标题</th>
+	                	<th>显示时间</th>
+	                	<!-- <th>内容</th> -->
+	                	<th>类型</th>
+	                	<th>状态</th>
+	                	<th>操作</th>
+	                </tr>
+	             </thead>
+	             <tbody id="newsdyinfo-container">
+				  	#set($newsDyInfos = $pageInfo.data)
+					#parse("/newsdyinfo/newsdyinfo-index-list.vm")
+	             </tbody>
+             </table>
+         </div>
+        
+         #paging("id", "newsdyinfo-paging")
+         
+	</div>
+	<!--dk_main end-->
+	</div>
+	<!--dk_layout end-->
+
+<script type="text/javascript" src="${rc.contextPath}/js/common/commonpage.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/newsdyinfo/newsDyInfoInterface.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/newsdyinfo/newsDyInfoIndex.js" ></script>
+<script type="text/javascript" >
+	$(function() {
+		newsDyInfoPage.paging.toSetInfo($!pageInfo.pageNo, $!pageInfo.pageSize, $!pageInfo.totalPages, $!pageInfo.totalRecords);
+	});
+</script>
+
+#parse("/common/footer.vm")

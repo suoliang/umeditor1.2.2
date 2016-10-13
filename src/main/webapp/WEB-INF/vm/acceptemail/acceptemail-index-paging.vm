@@ -1,0 +1,9 @@
+#set($acceptEmails = $pageInfo.data) 
+
+#parse("/acceptemail/acceptemail-index-list.vm")
+
+<script type="text/javascript">
+	$(function() {
+		$('#acceptemail-paging').paging('setInfo', $!pageInfo.pageNo, $!pageInfo.pageSize, $!pageInfo.totalPages, $!pageInfo.totalRecords);
+	})
+</script>

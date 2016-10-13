@@ -1,0 +1,32 @@
+.dk_main{margin-left:210px;padding-right:10px; padding-left:10px;}
+.dk_sidebar{float: left;width:210px;height:100%; z-index:99;}
+.dk_layout{ margin:0;}
+.c_clearfix{ display:inline-block;}
+/*搜索*/
+.dk_sidebar .dk_search{ height:40px;}
+.dk_sidebar .dk_search .c_input{ position:relative;height:18px; width:150px; float:left; margin:10px; border-radius:10px; display:none;}/*导航上的搜索框隐藏*/
+.dk_sidebar .dk_search .c_input input{ position:absolute; height:18px; border:none; outline:none;color:#fff; width:110px; display:block; margin-left:10px;}
+.dk_sidebar .dk_search .c_input i{ position:absolute; background-position:-155px -9px; width:17px; height:17px;right:0; display:block; float:right; cursor:pointer; margin-right:5px;}
+.dk_sidebar .dk_search .dk_hide{float:right; background-position:-172px -11px; width:19px; height:14px;  margin:13px 5px 0 8px; cursor:pointer;}
+.dk_sidebar .dk_search .c_vl{width:1px;height:40px;float:left;display:none;}/*导航上的搜索框隐藏*/
+/*一级导航*/
+.dk_sidebar .dk_menu li{ width:210px;}
+.dk_sidebar .dk_menu li a{height:40px; line-height:40px;}
+.dk_sidebar .dk_menu li .dk_nav{width:200px;padding-left:10px;}
+.dk_sidebar .dk_menu li .dk_nav i{margin:12px 5px 0 0;}
+.dk_sidebar .dk_menu li .dk_nav span{ width:143px;}
+.dk_sidebar .dk_menu li p.dk_sprite{background-position:-457px -12px; width:12px;height:12px;display:block;float:right; margin:14px 10px; cursor:pointer;}
+.dk_sidebar .dk_menu li p.c_arr_down {background-position: -445px -15px;}
+/*end一级导航*/
+/*二级导航*/
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav{width:180px;padding-left:20px; padding-right:10px;height:40px; line-height:40px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav span{width:135px;}
+/*end 二级导航*/
+/*三级导航*/
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav{width:160px; padding-left:40px;padding-right:10px;height:40px;line-height:40px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav span{width:143px;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav .dk_sign{}
+/*end 三级导航*/
+/*首页*/
+.c_index{width:100%;overflow:hidden;}
+.c_block{width:49%; height:247px;margin-bottom:1%;}

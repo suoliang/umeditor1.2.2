@@ -1,0 +1,10 @@
+#set($sourceMaps = $sourceMap)
+#set($trialApplys = $pageInfo.data) 
+
+#parse("/freetrialapply/trialapply-index-list.vm")
+
+<script type="text/javascript">
+	$(function() {
+		$('#report-apply-paging').paging('setInfo', $!pageInfo.pageNo, $!pageInfo.pageSize, $!pageInfo.totalPages, $!pageInfo.totalRecords);
+	})
+</script>

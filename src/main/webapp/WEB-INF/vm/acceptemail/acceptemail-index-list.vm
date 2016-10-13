@@ -1,0 +1,10 @@
+#foreach($acceptEmail in $acceptEmails)
+	<tr>
+		<td>$velocityCount</td>
+		<td>$!{acceptEmail.email}</td>
+		<td>$!date.format('yyyy-MM-dd HH:mm:ss',$!acceptEmail.createTime)</td>
+		<td>
+			<a href="javascript:void(0)" class="fc_blue" tag="deleteAcceptEmail" oid="$!acceptEmail.id">删除</a>
+		</td>
+	</tr>
+#end

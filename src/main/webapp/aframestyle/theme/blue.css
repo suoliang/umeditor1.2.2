@@ -1,0 +1,29 @@
+body{ background-color:#F0F0F0;}
+.dk_top{background-color:#2E74DC;}
+.dk_top ul.c_fr .dk_hi{border-right:1px solid #D9F0FF;}
+.dk_top ul.c_fr .dk_hi{color:#D9F0FF;}
+.dk_top ul.c_fr .c_system a{color:#D9F0FF;}
+.dk_top ul.c_fr .dk_help{color:#D9F0FF;}
+.dk_top ul.c_fr .dk_more{color:#D9F0FF;}
+
+.dk_cont{background-color:#F0F0F0;}
+*+html .dk_cont{background-color:#F5F5F5;}
+.dk_sidebar{ background-color:#528BE2;}
+.dk_main{background-color:#F0F0F0;}
+
+/*左边搜索框*/
+.dk_sidebar .dk_search{background-color:#528BE2;}
+.dk_sidebar .dk_search .c_input{border:1px solid #fff;color:#fff;}
+.dk_sidebar .dk_search .c_input input{background-color:#3C8ED3;}
+.dk_sidebar .dk_search .c_vl{background-color:#D9F0FF;}
+/*导航*/
+.dk_sidebar .dk_menu li a:hover,.dk_sidebar .dk_menu li .active{ background-color:#2E74DC;}
+.dk_sidebar .dk_menu li .dk_nav span{color:#fff;}
+.dk_sidebar .dk_menu li .dk_sub_menu{background-color:#2E74DC;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav span,
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav span{color:#fff;}
+.dk_sidebar .dk_menu li .dk_sub_menu li a:hover,.dk_sidebar .dk_menu li .dk_sub_menu li .active{background-color:#127BCD;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu{background:#3C8ED3;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu li a:hover,.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu li .active{background-color:#92B6ED;}
+/*导航 end*/
+

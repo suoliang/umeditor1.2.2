@@ -1,0 +1,20 @@
+#foreach($newsDyInfo in $newsDyInfos)
+	<tr>
+		<td>$velocityCount</td>
+		<td><a href="$!{visitImagePath}$!{newsDyInfo.thumbnailPicUrl}" target="_blank"><img alt="" src="$!{visitImagePath}$!{newsDyInfo.thumbnailPicUrl}" style="width:20px;height:20px"></a></td>
+		<td>$!{newsDyInfo.title}</td>
+		<td>$!date.format('yyyy-MM-dd HH:mm:ss',$!newsDyInfo.dynamicTime)</td>
+		<!-- <td>$!{newsDyInfo.content}</td> -->
+		<td>#if($!newsDyInfo.type == 1)新闻动态#else成功案例#end</td>
+		<td>#if($!newsDyInfo.status == 1)启用#else停用#end</td>
+		<td>
+			<!-- #if($!newsDyInfo.status == 1)
+			<a href="javascript:void(0)" class="fc_org c_mr10" tag="changeStatus" oid="$!newsDyInfo.id">停用</a>
+			#else
+			<a href="javascript:void(0)" class="fc_green c_mr10" >启用</a>
+			#end -->
+			<a href="javascript:void(0)" class="fc_org c_mr10" tag="updateNews" oid="$!newsDyInfo.id">修改</a>
+			<a href="javascript:void(0)" class="fc_blue" tag="deleteNews" oid="$!newsDyInfo.id">删除</a>
+		</td>
+	</tr>
+#end

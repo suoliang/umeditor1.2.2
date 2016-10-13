@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中青华云事件报告管理平台</title>
+<link rel="stylesheet" href="${rc.contextPath}/css/common/base.css"  type="text/css" />
+<link rel="stylesheet" href="${rc.contextPath}/aframestyle/layout/framework.layout.css" type="text/css" /><!--头部和导航共用layout-->
+<link rel="stylesheet" href="${rc.contextPath}/css/common/common.css" type="text/css"/>
+<link id="def" rel="stylesheet" href="${rc.contextPath}/aframestyle/framework/layout.sidebar.open.css" type="text/css"/><!--导航左侧展开-->
+<!--<link tag="theme" oid="transverse" href="aframestyle/framework/layout.sidebar.shrinkage.css" rel="stylesheet" type="text/css">-->
+<!--<link rel="stylesheet" type="text/css" href="aframestyle/layout/fixed.css" />固定宽度w1200-->
+<link rel="stylesheet" href="${rc.contextPath}/aframestyle/theme/blue.css" type="text/css"/><!--报告蓝色主题-->
+<link rel="stylesheet" href="${rc.contextPath}/css/dk_alert/dk3_alert.css" type="text/css"/><!--弹框样式-->
+<link rel="stylesheet" href="${rc.contextPath}/iconfont/iconfont.css"/><!--图标使用-->
+
+<script type="text/javascript">
+	var ctx = "${rc.contextPath}";
+</script>
+
+<script src="${rc.contextPath}/js/common/jquery-1.11.1.min.js" type="text/javascript" ></script>
+<script src="${rc.contextPath}/aframestyle/js/framework.layout.js" type="text/javascript" ></script><!--框架导航所使用的js-->
+
+<script src="${rc.contextPath}/js/common/jquery-ui.min.js" type="text/javascript" ></script>
+<script src="${rc.contextPath}/js/common/jquery.nicescroll.js" type="text/javascript" ></script>
+<script src="${rc.contextPath}/js/common/tinyscrollbar.js" type="text/javascript" ></script>
+<script src="${rc.contextPath}/js/common/cyyun.gengeral.js" type="text/javascript" ></script>
+
+<script src="${rc.contextPath}/js/common/layer/layer.min.js" type="text/javascript"></script>
+<script src="${rc.contextPath}/js/gengeral.js" type="text/javascript" ></script>
+<script src="${rc.contextPath}/js/global-standard.js" type="text/javascript" ></script>
+<script src="${rc.contextPath}/js/global-application.js" type="text/javascript" ></script>
+
+<script type="text/javascript">
+	$(function() {
+		
+		$.ajax({
+			type : "post",
+			url : std.u("/login/userInfo.htm"),
+			data : {time:new Date().getTime()},
+			dataType : "json",
+			cache : false,
+			async : false,
+			success : function(response) {
+				if (response.type == "success") {
+					$("#username").text(response.data.username);
+				}
+			}
+		});
+		
+	});
+	
+</script>
+
+</head>
+<body>
+	<!--dk_top-->
+	<div class="dk_top">
+	    <div class="dk_layout">
+	    <div class="dk_logo c_fl c_m10">中青华云事件报告管理平台</div>
+	    <ul class="c_fr">
+	        <li><div class="dk_head"><img src="${rc.contextPath}/images/head.jpg" width="30px" height="30px" /></div></li>
+	        <li class="c_pr info">
+	        <div class="dk_user"><div class="dk_hi">下午好，<label id="username"></label><span>▼</span></div></div>
+	        <div class="dk_downbox c_none" id="dk_hi2">
+	            <ul class="dk_news">
+	                <li><a href="#"><i class="dk_sprite dk_userinfor"></i><span class="c_omit">用户信息</span></a></li>
+	                <li><a href="#"><i class="dk_sprite dk_password"></i><span class="c_omit">修改密码</span></a></li>
+	                <li><a href="#"><i class="dk_sprite dk_exit"></i><span class="c_omit">退出登录</span></a></li>   
+	             </ul>
+	        </div>
+	        </li>
+	        <li><a href="#" class="dk_more c_f12 "><div class="c_fl dk_more_icon dk_sprite"></div></a></li>
+	    </ul>
+	    <div class="c_cb"></div>
+	    </div>
+	</div>
+	<!--dk_top end-->
+	
+	<!--dk_cont-->
+	<div class="dk_cont">
+	<div class="dk_sidebar" id="dk_sidebar">
+    	<div class="dk_layout"> 
+            <div class="dk_search">
+               <div class="c_input"><input type="text" value=""/><i class="dk_sprite"></i></div>
+               <div class="c_vl"></div>
+               <div class="dk_hide dk_sprite" id="test"></div>
+    	    </div>   
+            <ul class="dk_menu">
+               <li><a href="${rc.contextPath}/rpt/trialApply/index.htm" class="dk_nav active"><i class="c_icon_home dk_sprite"></i><span>申请管理</span><p class="dk_sprite"></p></a></li>
+               <li><a href="${rc.contextPath}/download/trialApply/countDownloadAmount.htm" class="dk_nav"><i class="wxb_icon_jw dk_sprite"></i><span>案例统计</span><p class="dk_sprite"></p></a></li>
+               <li><a href="${rc.contextPath}/news/index.htm" class="dk_nav"><i class="c_icon_sz dk_sprite"></i><span>新闻管理</span><p class="dk_sprite"></p></a></li>
+               <li><a href="${rc.contextPath}/acceptEmail/index.htm" class="dk_nav"><i class="wxb_icon_all dk_sprite"></i><span>收件人管理</span><p class="dk_sprite"></p></a></li>
+               <!-- 
+               <li><a href="javascript:void(0)" class="dk_nav"><i class="wxb_icon_jn dk_sprite"></i><span>预警</span><p class="dk_sprite"></p></a>
+                      <ul class="dk_sub_menu">  
+                        <li><a href="domestic_report.html" class="dk_sub_nav active"><i class=" c_folder dk_sprite"></i><span>地方境内</span></a></li>
+                        <li><a href="domestic_receive.html" class="dk_sub_nav"><i class="c_file dk_sprite"></i><span>中心境内</span></a></li>
+                      </ul> 
+               </li> 
+               <li><a href="abroad_report.html" class="dk_nav"><i class="wxb_icon_jw dk_sprite"></i><span>任务下达</span><p class="dk_sprite"></p></a></li>
+               <li><a href="abroad_report.html" class="dk_nav"><i class="wxb_icon_jw dk_sprite"></i><span>任务接收</span><p class="dk_sprite"></p></a></li> 
+               -->
+
+            </ul>
+       </div>
+    </div>
+	<!--dk_sidebar end-->
+	
+	

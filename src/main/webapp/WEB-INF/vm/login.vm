@@ -1,0 +1,88 @@
+#parse("/common/blank-header.vm")
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('input[placeholder]').each(function(){$(this).is('input')?$(this).iePlaceholder():$(this).iePlaceholder({onInput: false});});
+		
+		$('#username').bind({
+			blur : function() {
+				if (util.isBlank(this.value)) {
+					$('.dk_error').text('用户名不能为空').show();
+				}
+			},
+			keydown : function() {
+				$('.dk_error').hide();
+				$('#password').val("");
+			}
+		});
+
+		$('#password').bind({
+			blur : function() {
+				if (util.isBlank(this.value)) {
+					$('.dk_error').text('密码不能为空').show();
+				}
+			},
+			keydown : function() {
+				$('.dk_error').hide();
+			}
+		});
+
+		$("#username").keydown(function(e) {
+			if (e && e.keyCode == 13) {
+				$("#password").focus();
+			}
+			e.stopPropagation();
+		});
+
+		$("#password").keydown(function(e) {
+			if (e && e.keyCode == 13) {
+				login();
+			}
+			e.stopPropagation();
+		});
+	});
+	
+	function login() {
+		var username = $("#username").val();
+		if (util.isBlank(username)) {
+			$('.dk_error').text('用户名不能为空').show();
+			return;
+		}
+		var password = $("#password").val();
+		if (util.isBlank(password)) {
+			$('.dk_error').text('密码不能为空').show();
+			return;
+		}
+		
+		$.ajax({
+			type : "POST",
+			url : std.u('/login/doLogin.htm'),
+			data : {username:$.trim(username),password:$.trim(password),time:new Date().getTime()},
+			dataType : "json",
+			cache : false,
+			async : false,
+			success : function(result) {
+				if (result.type == "error") {
+					$('.dk_error').text(result.message).show();
+				} else {
+					document.location = std.u('/index.htm');
+				}
+			}
+		});
+		
+	}
+	
+</script>
+	<div class="dk_default_bg">
+	    <div class="dk_default_logo  c_tc">中青华云事件报告管理平台</div>
+	    <div class="dk_default_box c_bc">
+	         <div class="dk_default_img c_bc ">用户登录</div>
+	         <div class="dk_account c_bc c_mt15 "><div class="dk_det_icon dk_user_icon"></div><input type="text" class="dk_account_input c_bd_radius" placeholder="请输入用户名" id="username" autocomplete="off"/></div>
+	         <div class="dk_account c_bc c_mt10 c_mb10"><div class="dk_det_icon dk_pass_icon"></div><input type="password" class="dk_account_input c_bd_radius" placeholder="请输入密码" id="password" autocomplete="off"/></div>
+	         <div class="dk_account c_bc c_mt10 dk_safe c_f12"><input type="checkbox" class="c_mr5 c_vm dk_checkbox"/><label>记住密码</label></div>
+	         <div class="dk_account c_bc c_mt10 dk_safe c_f12"><input type="button" onclick="login();" class="dk_def_but c_bd_radius c_f14" value="登 录" tabindex="1" /></div>
+	         <div class="dk_account c_bc c_mt5 dk_error c_f12" style="display:none;"></div>
+	    </div>
+	</div>
+
+#parse("/common/blank-footer.vm")

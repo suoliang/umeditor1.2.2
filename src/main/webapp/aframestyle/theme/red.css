@@ -1,0 +1,29 @@
+body{ background-color:#F5F5F5;}
+.dk_top{background-color:#CD452B;}
+.dk_top ul.c_fr .dk_hi{border-right:1px solid #CCA39B;}
+.dk_top ul.c_fr .dk_hi{color:#CCA39B;}
+.dk_top ul.c_fr .c_system a{color:#D2B3B3;}
+.dk_top ul.c_fr .dk_help{color:#E8D9D9;}
+
+.dk_cont{background-color:#161616;}
+*+html .dk_cont{background-color:#F5F5F5;}
+.dk_sidebar{ background-color:#161616;}
+.dk_main{background-color:#F5F5F5;}
+
+
+/*左边搜索框*/
+.dk_sidebar .dk_search{border-bottom:solid 1px #343434;}
+.dk_sidebar .dk_search .c_input{border:1px solid #fff;color:#fff;}
+.dk_sidebar .dk_search .c_input input{background-color:#343434;}
+.dk_sidebar .dk_search .c_vl{background-color:#7C7C7C;}
+/*导航*/
+.dk_sidebar .dk_menu li a:hover,.dk_sidebar .dk_menu li .active{ background-color:#343434;}
+.dk_sidebar .dk_menu li .dk_nav span{color:#fff;}
+.dk_sidebar .dk_menu li .dk_sub_menu{background-color:#343434;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub_nav span,
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu .dk_sub2_nav span{color:#fff;}
+.dk_sidebar .dk_menu li .dk_sub_menu li a:hover,.dk_sidebar .dk_menu li .dk_sub_menu li .active{background-color:#161616;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu{background:#343434;}
+.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu li a:hover,.dk_sidebar .dk_menu li .dk_sub_menu li .dk_sub2_menu li .active{background-color:#161616;}
+/*导航 end*/
+
